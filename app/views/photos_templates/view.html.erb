@@ -1,0 +1,34 @@
+<h1>Photo Details</h1>
+
+<%  @the_user.own_photos.each do |a_photo|%>
+
+<dl>
+<dt>Image </dt>
+  <dd><img src="<%= a_photo.image %>"></dd>
+
+<dt>Caption </dt>
+  <dd><td><%= a_photo.caption %></dd>
+
+<dt>Owner</dt>
+  <dd>"<%= a_photo.poster.username %>"</dd>
+
+<dt>Posted </dt>
+  <dd>Image </dd>
+
+<dt>Edit photo </dt>
+  <dd>Image </dd>
+
+<dt>Delete Photo </dt>
+  <dd>Image </dd>
+
+</dl>
+<h1>Comments </h1>
+
+<table >
+    <tr>
+    <th> Commenter </th>
+    <th> Comment </th>
+    <th> Posted </th>
+  
+  </tr>
+</table>
