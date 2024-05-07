@@ -11,6 +11,11 @@ def index
 end
 
 def view
+
+  url_id = params.fetch("path_id")
+  matching_photos = Photo.where({ :id => url_id})
+
+  @the_photo = matching_photos.at(0)
   render ({:template =>"photos_templates/view"})
 end 
 end
