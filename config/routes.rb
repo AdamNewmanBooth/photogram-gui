@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get("/photos", {:controller => "photos", :action => "index"})
   get("/photos/:path_id", {:controller => "photos", :action => "view"})
   get("/delete_photo/:path_id", {:controller => "photos", :action => "delete"})
-  post("/photos/:path_id", {:controller => "photos", :action => "view"})
+  post("/Update_photos/:path_id", {:controller => "photos", :action => "view"})
 
 end
