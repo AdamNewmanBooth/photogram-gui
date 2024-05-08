@@ -31,12 +31,10 @@ class UsersController < ApplicationController
 
   def update
     the_id = params.fetch("path_id")
-  
+    input_username = params.fetch("username")
     matching_users = User.where({ :id => the_id})
     
     the_user = matching_users.at(0)
-  
-    input_username = params.fetch("username")
     
     the_user.username = input_username
   
