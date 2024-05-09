@@ -30,9 +30,9 @@ class UsersController < ApplicationController
   end 
 
   def update
-    the_id = params.fetch("path_id")
+    the_username = params.fetch("path_username")
     input_username = params.fetch("username")
-    matching_users = User.where({ :id => the_id})
+    matching_users = User.where({ :username => the_username})
     
     the_user = matching_users.at(0)
     
@@ -40,6 +40,6 @@ class UsersController < ApplicationController
   
     the_user.save
   
-    redirect_to("/user/" + the_user.username)
+    redirect_to("/users/" + the_user.username)
 end
 end
